@@ -9,7 +9,9 @@ const items = require('./modules/items');
 const singlenews = require('./modules/singleItem');
 const questionPool = require('./modules/questionPool');
 const protestRoutes = require('./modules/protestRoutes.js');
-
+const mostView=require('./modules/mostView.js')
+const TopnewsModule =require('./modules/TopnewsModule.js')
+const SemiFrontNewsModule =require('./modules/SemiFrontNewsModule.js')
 
 const orderManage = require('./modules/orderManage');
 // const cart = resquire('./modules/cart');
@@ -47,8 +49,11 @@ db.once('open', () => {
 app.use('/auth', auth);
 app.use('/allnews', items);
 app.use('/singlenews', singlenews);
+app.use('/most-view', mostView);
 app.use('/questionPool', questionPool);
 app.use('/decision', protestRoutes);
+app.use('/top-news', TopnewsModule);
+app.use('/semi-top-news', SemiFrontNewsModule);
 
 
 

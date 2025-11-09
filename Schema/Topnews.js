@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
-
     img: { type: [String], required: false },  // Store multiple image paths
     category: { type: String, required: true },
     title: { type: String, required: true },
@@ -13,6 +12,6 @@ const postSchema = new mongoose.Schema({
     description: { type: String, required: true },
 });
 
-const Allnews = mongoose.model('Allnews', postSchema);
+const Topnews = mongoose.model('Topnews', postSchema);
 
-module.exports = Allnews;
+module.exports = Topnews;
